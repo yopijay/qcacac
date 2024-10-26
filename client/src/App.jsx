@@ -1,10 +1,13 @@
 // Libraries
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ThemeProvider } from '@emotion/react';
 
 // Core
 import { theme } from 'core/global/themes/theme'; // Theme
+
+// Pages
+import Main from "./pages";
 
 const App = () => {
     const client = new QueryClient();
@@ -13,7 +16,9 @@ const App = () => {
         <ThemeProvider theme= { theme() }>
             <Router>
                 <QueryClientProvider client= { client }>
-                    testing
+                    <Routes>
+                        <Route path= "*" element= { <Main /> } />
+                    </Routes>
                 </QueryClientProvider>
             </Router>
         </ThemeProvider>

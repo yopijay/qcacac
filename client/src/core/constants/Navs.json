@@ -1,0 +1,27 @@
+{
+    "client": [
+        {
+            "id": "home",
+            "label": "Home",
+            "link": "/"
+        },
+        {
+            "id": "pets",
+            "label": "Pet Gallery",
+            "link": "/pets"
+        },
+        {
+            "id": "services",
+            "label": "Services",
+            "link": "/services"
+        },
+        {
+            "id": "faqs",
+            "label": "FAQs",
+            "link": "/faqs"
+        }
+    ],
+    "admin": [
+        
+    ]
+}
