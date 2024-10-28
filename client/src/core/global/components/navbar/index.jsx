@@ -16,7 +16,13 @@ const Index = () => {
         <AppBar position= "fixed" sx= { appbar }>
             <Container maxWidth= "lg">
                 <Stack direction= "row" justifyContent= "space-between" alignItems= "center" spacing= { 1 }>
-                    <Avatar alt= "QCACACE" src= { Logo } sx= {{ width: 60, height: 60 }} component= { Link } to= "/" />
+                    <Stack direction= "row" justifyContent= "flex-start" alignItems= "center" spacing= { 1 } component= { Link } to= "/" sx= {{ textDecoration: 'none' }}>
+                        <Avatar alt= "QCACACE" src= { Logo } sx= {{ width: 60, height: 60 }} />
+                        <Stack direction= "column" justifyContent= "flex-start" alignItems= "stretch">
+                            <Typography sx= {{ fontFamily: 'Montserrat ExtraBold', textTransform: 'uppercase', color: '#1B4168' }}>Quezon City Animal Care & Adoption Center</Typography>
+                            <Typography sx= {{ fontFamily: 'Montserrat ExtraBold', textTransform: 'uppercase', color: '#1B4168' }}>E - Services</Typography>
+                        </Stack>
+                    </Stack>
                     <Stack direction= "row" justifyContent= "flex-end" alignItems= "center" spacing= { 4 }>
                         { (Navs.client).map((nav, index) => <Typography component= { Link } key= { index } to= { nav.link } sx= { navs }>{ nav.label }</Typography> )}
                     </Stack>
